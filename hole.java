@@ -15,4 +15,12 @@ public class hole {
 		this.putts = putts;
 
 	}
+
+	public int getPutts(){
+		return putts;
+	}
+
+	public int getScore(){
+		return strokes;
+	}
 }

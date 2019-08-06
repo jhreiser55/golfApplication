@@ -14,12 +14,12 @@ public class round18 {
 
 	public round18(int coursePar, String courseName, Scanner s) {
 
-		hole[] holes = new hole[17];
+		hole[] holes = new hole[19];
 		System.out.println("Enter in hole by hole? y/n");
 		String yORn = s.next();
 		if(yORn.equals("y")){
-			for(int i = 0; i < 18; i++) {
-				System.out.println("Hole " + (i + 1) + ":");
+			for(int i = 1; i < 19; i++) {
+				System.out.println("Hole " + i + ":");
 				System.out.println("What is this holes par?");
 				int holePar = s.nextInt();
 				System.out.println("What did you shoot on this hole?");
@@ -28,9 +28,23 @@ public class round18 {
 				int holePutts = s.nextInt();
 				holes[i] = new hole(holePar,holeStrokes,holePutts);
 			}
+			//calculating total putts in the round
+			int totalPutts = 0;
+			for(int i = 1; i < 19; i++){
+				totalPutts += holes[i].getPutts();
+			}
+			System.out.println("You had " + totalPutts + " putts today!");
+
+			//calculating total score in the round
+			int totalScore = 0;
+			for(int i = 1; i < 19; i++){
+				totalScore += holes[i].getScore();
+			}
+			System.out.println("You shot a " + totalScore + " today!");
+			
 		}
-		this.coursePar = s.nextInt();
-		System.out.println("Course par is: " + coursePar);
+		else
+		{}
 
 	}
 	public String getName(){
