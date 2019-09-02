@@ -5,7 +5,8 @@ public class round18 {
 	private int coursePar;
 	private int myScore;
 	private String courseName;
-	private boolean frontOrBack;
+	private int totalPutts;
+	private int totalScore;
 
 	public round18(int coursePar, String courseName){
 		this.coursePar = coursePar;
@@ -44,7 +45,12 @@ public class round18 {
 			
 		}
 		else
-		{}
+		{
+			System.out.println("How many putts did you have this round?");
+			totalPutts = s.nextInt();
+			System.out.println("What did you shoot today?");
+			totalScore = s.nextInt();		
+		}
 
 	}
 	public String getName(){

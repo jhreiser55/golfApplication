@@ -5,6 +5,8 @@ public class round9 {
 	private int roundPar;
 	private String course;
 	private String frontOrBack;
+	private int totalPutts;
+	private int totalScore;
 
 	public round9(int roundPar, String course, String frontOrBack){
 		this.roundPar = roundPar;
@@ -12,7 +14,8 @@ public class round9 {
 		this.frontOrBack = frontOrBack;
 	}
 
-	public round9(int roundPar, String course, String frontOrBack, Scanner s){		      hole[] holes = new hole[10];
+	public round9(int roundPar, String course, String frontOrBack, Scanner s){		      
+		hole[] holes = new hole[10];
 		System.out.println("Is this the front or back 9?");
 		System.out.println("Enter in hole by hole? y/n");
 		String yORn = s.next().toLowerCase();
@@ -45,7 +48,9 @@ public class round9 {
 		else
 		{
 			System.out.println("How many putts did you have this round?");
-			/*****************************************/
+			totalPutts = s.nextInt();
+			System.out.println("What did you shoot today?");
+			totalScore = s.nextInt();	
 		}
 
 
