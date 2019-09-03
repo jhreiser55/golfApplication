@@ -1,15 +1,19 @@
 import java.util.Scanner;
 public class main{
-	
+
+	private static appState state;
+
 	public static void main(String args[]){
-		
-		Scanner s = new Scanner(System.in);
-		System.out.println("Please enter in the course you played");
-		String courseName = s.nextLine();
-		System.out.println("What is " + courseName + "'s par?");
-		int coursePar = s.nextInt();
-		round18 current = new round18(coursePar,courseName,s);
-		System.out.println(current.getName() + " sucks lol :p");		
+	
+		String input;
+		Scanner userInput = new Scanner(System.in);
+
+		try {
+			state = appState.instance();
+			if(args[0].endsWith(/*need to figure out file sav*/)){
+				state.restore(args[0]);
+				System.out.println("\nWelcome back " + state.getName();
+				//Finish copying from interpreter.java line 41		
 
 	}
 }
